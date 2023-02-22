@@ -8,7 +8,11 @@ using CoderBash.Net.ECB.Models;
 
 namespace CoderBash.Net.ECB.Client
 {
-	public sealed class EcbClient : IDisposable
+    /// <summary>
+    /// Client for the ECB <see href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">Euro foreign exchange reference rates</see> API.
+	/// The base currency for all exchange rates is EURO.
+    /// </summary>
+    public sealed class EcbClient : IDisposable
 	{
 		private readonly HttpClient _client;
 		private readonly EcbCurrencies _currencies;
@@ -19,17 +23,32 @@ namespace CoderBash.Net.ECB.Client
 			_currencies = new EcbCurrencies();
 		}
 
+		/// <summary>
+		/// Fetch daily rates in all available currencies
+		/// </summary>
+		/// <param name="cancellationToken"></param>
+		/// <returns>List of <see cref="ExchangeRate"/> models</returns>
 		public async Task<List<ExchangeRate>> GetDailyRatesAsync(CancellationToken cancellationToken = default)
 		{
 			return await FetchRatesAsync(EcbConfiguration.ECB_DAILY_ENDPOINT, cancellationToken);
 		}
 
-		public async Task<List<ExchangeRate>> GetRecentHistoryAsync(CancellationToken cancellationToken = default)
+        /// <summary>
+        /// Fetch recent historical rates (most recent 90 days) in all available currencies
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns>List of <see cref="ExchangeRate"/> models</returns>
+        public async Task<List<ExchangeRate>> GetRecentHistoryAsync(CancellationToken cancellationToken = default)
 		{
 			return await FetchRatesAsync(EcbConfiguration.ECB_HIST90_ENDPOINT, cancellationToken);
 		}
 
-		public async Task<List<ExchangeRate>> GetFullHistoryAsync(CancellationToken cancellationToken = default)
+        /// <summary>
+        /// Fetch all historical rates in all available currencies
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns>List of <see cref="ExchangeRate"/> models</returns>
+        public async Task<List<ExchangeRate>> GetFullHistoryAsync(CancellationToken cancellationToken = default)
 		{
 			return await FetchRatesAsync(EcbConfiguration.ECB_HISTORY_ENDPOINT, cancellationToken);
 		}

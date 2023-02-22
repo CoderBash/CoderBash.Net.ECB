@@ -4,6 +4,9 @@ using System.Runtime.Serialization;
 
 namespace CoderBash.Net.ECB.Exceptions
 {
+    /// <summary>
+    /// Exception thrown when an error occurs with any request to the ECB API.
+    /// </summary>
 	[ExcludeFromCodeCoverage]
 	[Serializable]
 	public class EcbRequestException : Exception

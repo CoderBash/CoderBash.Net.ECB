@@ -4,6 +4,9 @@ using System.Runtime.Serialization;
 
 namespace CoderBash.Net.ECB.Exceptions
 {
+    /// <summary>
+    /// Exception thrown when the structure of the ECB XML response is invalid.
+    /// </summary>
 	[ExcludeFromCodeCoverage]
 	[Serializable]
 	public class EcbFormatException : Exception

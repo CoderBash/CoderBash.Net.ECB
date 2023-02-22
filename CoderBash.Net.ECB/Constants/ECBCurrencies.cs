@@ -2,22 +2,22 @@
 namespace CoderBash.Net.ECB.Constants
 {
 	/// <summary>
-	/// 
+	/// ECB Currency model
 	/// </summary>
 	public class EcbCurrency
 	{
 		/// <summary>
-		/// 
+		/// ISO 3 Code of the currency
 		/// </summary>
 		public string IsoCode { get; set; }
 
 		/// <summary>
-		/// 
+		/// Descriptive name of the currency
 		/// </summary>
 		public string Description { get; set; }
 
 		/// <summary>
-		/// 
+		/// Currency symbol
 		/// </summary>
 		public string Symbol { get; set; }
 
@@ -29,10 +29,10 @@ namespace CoderBash.Net.ECB.Constants
 		}
 	}
 
-	/// <summary>
-	/// 
-	/// </summary>
-	public class EcbCurrencies : List<EcbCurrency>
+    /// <summary>
+    /// List of all currently available currencies for the ECB <see href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">Euro foreign exchange reference rates</see> API.
+    /// </summary>
+    public class EcbCurrencies : List<EcbCurrency>
 	{
 		public EcbCurrencies()
 		{
