@@ -8,8 +8,8 @@ namespace CoderBash.Net.ECB.Tests
 		Author = "NicolasDemarbaix",
 		Category = "CoderBash.Net.ECB",
 		Description = "ECB Client Tests",
-		TestOf = typeof(ECBClient))]
-	public class ECBClientTests
+		TestOf = typeof(EcbClient))]
+	public class EcbClientTests
 	{
 		private const long MAX_PROCESSING_TIME_DAILY_MS = 1000;
 		private const long MAX_PROCESSING_TIME_HIST90_MS = 1000;
@@ -24,7 +24,7 @@ namespace CoderBash.Net.ECB.Tests
 			Description = "Test ECB daily endpoint")]
 		public void Test_ECB_Daily()
 		{
-			using var client = new ECBClient();
+			using var client = new EcbClient();
 
 			Assert.DoesNotThrowAsync(async () =>
 			{
@@ -47,7 +47,7 @@ namespace CoderBash.Net.ECB.Tests
 			Description = "Test ECB history (90d) endpoint")]
 		public void Test_ECB_History90()
 		{
-			using var client = new ECBClient();
+			using var client = new EcbClient();
 
 			Assert.DoesNotThrowAsync(async () =>
 			{
@@ -70,7 +70,7 @@ namespace CoderBash.Net.ECB.Tests
 			Description = "Test ECB history endpoiht")]
 		public void Test_ECB_History()
 		{
-			using var client = new ECBClient();
+			using var client = new EcbClient();
 
 			Assert.DoesNotThrowAsync(async () =>
 			{

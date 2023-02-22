@@ -4,24 +4,24 @@ namespace CoderBash.Net.ECB.Constants
 	/// <summary>
 	/// 
 	/// </summary>
-	public class ECBCurrency
+	public class EcbCurrency
 	{
 		/// <summary>
 		/// 
 		/// </summary>
-		public string IsoCode { get; set; } = null!;
+		public string IsoCode { get; set; }
 
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Description { get; set; } = null!;
+		public string Description { get; set; }
 
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Symbol { get; set; } = null!;
+		public string Symbol { get; set; }
 
-		public ECBCurrency(string isoCode, string symbol, string description)
+		public EcbCurrency(string isoCode, string symbol, string description)
 		{
 			IsoCode = isoCode;
 			Symbol = symbol;
@@ -32,41 +32,41 @@ namespace CoderBash.Net.ECB.Constants
 	/// <summary>
 	/// 
 	/// </summary>
-	public class ECBCurrencies : List<ECBCurrency>
+	public class EcbCurrencies : List<EcbCurrency>
 	{
-		public ECBCurrencies()
+		public EcbCurrencies()
 		{
-			Add(new ECBCurrency("EUR", "€", "Euro"));
-            Add(new ECBCurrency("USD", "$", "United States Dollar"));
-            Add(new ECBCurrency("JPY", "¥", "Japanese Yen"));
-            Add(new ECBCurrency("BGN", "Lev", "Bulgarian Lev"));
-            Add(new ECBCurrency("CZK", "Kč", "Czech Koruna"));
-            Add(new ECBCurrency("DKK", "kr", "Danish Krone"));
-            Add(new ECBCurrency("GBP", "£", "Pound Sterling"));
-            Add(new ECBCurrency("HUF", "Ft", "Hungarian Forint"));
-            Add(new ECBCurrency("PLN", "zł", "Polish złoty"));
-            Add(new ECBCurrency("RON", "Leu", "Romanian Leu"));
-            Add(new ECBCurrency("SEK", "kr", "Swedish Krona"));
-            Add(new ECBCurrency("CHF", "Fr", "Swiss Franc"));
-            Add(new ECBCurrency("ISK", "kr", "Icelandic Krona"));
-            Add(new ECBCurrency("NOK", "kr", "Norwegian Krona"));
-            Add(new ECBCurrency("TRY", "₺", "Turkish Lira"));
-            Add(new ECBCurrency("AUD", "$", "Australian Dollar"));
-            Add(new ECBCurrency("BRL", "R$", "Brazilian Real"));
-            Add(new ECBCurrency("CAD", "$", "Canadian Dollar"));
-            Add(new ECBCurrency("CNY", "¥", "Renminbi"));
-            Add(new ECBCurrency("HKD", "$", "Hong Kong Dollar"));
-            Add(new ECBCurrency("IDR", "Rp", "Indonesian Rupiah"));
-            Add(new ECBCurrency("ILS", "₪", "Israeli New Shekel"));
-            Add(new ECBCurrency("INR", "₹", "Indian Rupee"));
-            Add(new ECBCurrency("KRW", "₩", "South Korean Won"));
-            Add(new ECBCurrency("MXN", "$", "Mexican Peso"));
-            Add(new ECBCurrency("MYR", "RM", "Malaysian Ringgit"));
-            Add(new ECBCurrency("NZD", "$", "New Zealand Dollar"));
-            Add(new ECBCurrency("PHP", "₱", "Philippine Peso"));
-            Add(new ECBCurrency("SGD", "$", "Singapore Dollar"));
-            Add(new ECBCurrency("THB", "฿", "Thai Baht"));
-            Add(new ECBCurrency("ZAR", "R", "South African Rand"));
+			Add(new EcbCurrency("EUR", "€", "Euro"));
+            Add(new EcbCurrency("USD", "$", "United States Dollar"));
+            Add(new EcbCurrency("JPY", "¥", "Japanese Yen"));
+            Add(new EcbCurrency("BGN", "Lev", "Bulgarian Lev"));
+            Add(new EcbCurrency("CZK", "Kč", "Czech Koruna"));
+            Add(new EcbCurrency("DKK", "kr", "Danish Krone"));
+            Add(new EcbCurrency("GBP", "£", "Pound Sterling"));
+            Add(new EcbCurrency("HUF", "Ft", "Hungarian Forint"));
+            Add(new EcbCurrency("PLN", "zł", "Polish złoty"));
+            Add(new EcbCurrency("RON", "Leu", "Romanian Leu"));
+            Add(new EcbCurrency("SEK", "kr", "Swedish Krona"));
+            Add(new EcbCurrency("CHF", "Fr", "Swiss Franc"));
+            Add(new EcbCurrency("ISK", "kr", "Icelandic Krona"));
+            Add(new EcbCurrency("NOK", "kr", "Norwegian Krona"));
+            Add(new EcbCurrency("TRY", "₺", "Turkish Lira"));
+            Add(new EcbCurrency("AUD", "$", "Australian Dollar"));
+            Add(new EcbCurrency("BRL", "R$", "Brazilian Real"));
+            Add(new EcbCurrency("CAD", "$", "Canadian Dollar"));
+            Add(new EcbCurrency("CNY", "¥", "Renminbi"));
+            Add(new EcbCurrency("HKD", "$", "Hong Kong Dollar"));
+            Add(new EcbCurrency("IDR", "Rp", "Indonesian Rupiah"));
+            Add(new EcbCurrency("ILS", "₪", "Israeli New Shekel"));
+            Add(new EcbCurrency("INR", "₹", "Indian Rupee"));
+            Add(new EcbCurrency("KRW", "₩", "South Korean Won"));
+            Add(new EcbCurrency("MXN", "$", "Mexican Peso"));
+            Add(new EcbCurrency("MYR", "RM", "Malaysian Ringgit"));
+            Add(new EcbCurrency("NZD", "$", "New Zealand Dollar"));
+            Add(new EcbCurrency("PHP", "₱", "Philippine Peso"));
+            Add(new EcbCurrency("SGD", "$", "Singapore Dollar"));
+            Add(new EcbCurrency("THB", "฿", "Thai Baht"));
+            Add(new EcbCurrency("ZAR", "R", "South African Rand"));
         }
 	}
 }

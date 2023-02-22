@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace CoderBash.Net.ECB.Constants
 {
 	[ExcludeFromCodeCoverage]
-	public class ECBConfiguration
+	public static class EcbConfiguration
 	{
 		public const string ECB_BASE_URL = "https://www.ecb.europa.eu/stats/eurofxref/";
 		public const string ECB_DAILY_ENDPOINT = "eurofxref-daily.xml";

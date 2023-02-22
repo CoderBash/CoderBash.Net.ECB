@@ -8,31 +8,30 @@ using CoderBash.Net.ECB.Models;
 
 namespace CoderBash.Net.ECB.Client
 {
-	// TODO set log event Ids
-	public sealed class ECBClient : IDisposable
+	public sealed class EcbClient : IDisposable
 	{
 		private readonly HttpClient _client;
-		private readonly ECBCurrencies _currencies;
+		private readonly EcbCurrencies _currencies;
 
-		public ECBClient()
+		public EcbClient()
 		{
 			_client = SetupClient();
-			_currencies = new ECBCurrencies();
+			_currencies = new EcbCurrencies();
 		}
 
 		public async Task<List<ExchangeRate>> GetDailyRatesAsync(CancellationToken cancellationToken = default)
 		{
-			return await FetchRatesAsync(ECBConfiguration.ECB_DAILY_ENDPOINT, cancellationToken);
+			return await FetchRatesAsync(EcbConfiguration.ECB_DAILY_ENDPOINT, cancellationToken);
 		}
 
 		public async Task<List<ExchangeRate>> GetRecentHistoryAsync(CancellationToken cancellationToken = default)
 		{
-			return await FetchRatesAsync(ECBConfiguration.ECB_HIST90_ENDPOINT, cancellationToken);
+			return await FetchRatesAsync(EcbConfiguration.ECB_HIST90_ENDPOINT, cancellationToken);
 		}
 
 		public async Task<List<ExchangeRate>> GetFullHistoryAsync(CancellationToken cancellationToken = default)
 		{
-			return await FetchRatesAsync(ECBConfiguration.ECB_HISTORY_ENDPOINT, cancellationToken);
+			return await FetchRatesAsync(EcbConfiguration.ECB_HISTORY_ENDPOINT, cancellationToken);
 		}
 
 		#region Fetch methods
@@ -46,7 +45,7 @@ namespace CoderBash.Net.ECB.Client
 
             if (rootNode == null)
             {
-                throw new ECBFormatException($"Unable to find a root CUBE node for the response of ECB request '{fromEndpoint}'");
+                throw new EcbFormatException($"Unable to find a root CUBE node for the response of ECB request '{fromEndpoint}'");
             }
 
             foreach (XmlNode cubeNode in rootNode.ChildNodes)
@@ -118,20 +117,14 @@ namespace CoderBash.Net.ECB.Client
 
 			if (xmlDocument.DocumentElement == null)
 			{
-				throw new ECBFormatException("ECB response could not be loaded as XML.");
+				throw new EcbFormatException("ECB response could not be loaded as XML.");
 			}
 
-			XmlNode? rootNode = null;
-
-			foreach (XmlNode node in xmlDocument.DocumentElement.ChildNodes)
-			{
-				if (node.Name.Equals("cube", StringComparison.OrdinalIgnoreCase)) {
-					rootNode = node;
-					break;
-				}
-			}
-
-			return rootNode;
+			return xmlDocument.DocumentElement
+				.ChildNodes
+				.Cast<XmlNode>()
+				.Where(node => node.Name.Equals("Cube", StringComparison.OrdinalIgnoreCase))
+				.FirstOrDefault();
 		}
 
 		private static bool TryGetDate(XmlNode forNode, out DateTime exchangeDate)
@@ -156,14 +149,14 @@ namespace CoderBash.Net.ECB.Client
 
 			if (!response.IsSuccessStatusCode)
 			{
-				throw new ECBRequestException($"An error occurred fetching data from ECB endpoint '{endpoint}': {response.ReasonPhrase}");
+				throw new EcbRequestException($"An error occurred fetching data from ECB endpoint '{endpoint}': {response.ReasonPhrase}");
 			}
 
 			var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
 
 			if (responseContent == null)
 			{
-				throw new ECBRequestException($"Unable to read response content from ECB endpoint '{endpoint}'");
+				throw new EcbRequestException($"Unable to read response content from ECB endpoint '{endpoint}'");
 			}
 
 			return responseContent;
@@ -184,7 +177,7 @@ namespace CoderBash.Net.ECB.Client
 		{
 			var client = new HttpClient
 			{
-				BaseAddress = new Uri(ECBConfiguration.ECB_BASE_URL)
+				BaseAddress = new Uri(EcbConfiguration.ECB_BASE_URL)
 			};
 
 			return client;

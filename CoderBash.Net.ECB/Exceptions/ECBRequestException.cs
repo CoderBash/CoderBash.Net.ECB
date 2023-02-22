@@ -6,21 +6,21 @@ namespace CoderBash.Net.ECB.Exceptions
 {
 	[ExcludeFromCodeCoverage]
 	[Serializable]
-	public class ECBRequestException : Exception
+	public class EcbRequestException : Exception
 	{
-		public ECBRequestException()
+		public EcbRequestException()
 		{
 		}
 
-        public ECBRequestException(string? message) : base(message)
+        public EcbRequestException(string? message) : base(message)
         {
         }
 
-        public ECBRequestException(string? message, Exception? innerException) : base(message, innerException)
+        public EcbRequestException(string? message, Exception? innerException) : base(message, innerException)
         {
         }
 
-        protected ECBRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected EcbRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
