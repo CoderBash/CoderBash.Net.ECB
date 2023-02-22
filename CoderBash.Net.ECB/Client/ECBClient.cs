@@ -142,8 +142,7 @@ namespace CoderBash.Net.ECB.Client
 			return xmlDocument.DocumentElement
 				.ChildNodes
 				.Cast<XmlNode>()
-				.Where(node => node.Name.Equals("Cube", StringComparison.OrdinalIgnoreCase))
-				.FirstOrDefault();
+				.FirstOrDefault(node => node.Name.Equals("Cube", StringComparison.OrdinalIgnoreCase));
 		}
 
 		private static bool TryGetDate(XmlNode forNode, out DateTime exchangeDate)
