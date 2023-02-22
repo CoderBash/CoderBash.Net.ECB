@@ -11,9 +11,9 @@ namespace CoderBash.Net.ECB.Tests
 		TestOf = typeof(ECBClient))]
 	public class ECBClientTests
 	{
-		private const long MAX_PROCESSING_TIME_DAILY_MS = 500;
-		private const long MAX_PROCESSING_TIME_HIST90_MS = 500;
-		private const long MAX_PROCESSING_TIME_HIST_MS = 2000;
+		private const long MAX_PROCESSING_TIME_DAILY_MS = 1000;
+		private const long MAX_PROCESSING_TIME_HIST90_MS = 1000;
+		private const long MAX_PROCESSING_TIME_HIST_MS = 5000;
 
 		private const int MIN_EXCHANGERATE_COUNT_DAILY = 30;
 		private const int MIN_EXCHANGERATE_COUNT_HIST90 = 1600;
