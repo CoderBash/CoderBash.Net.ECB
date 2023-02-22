@@ -1,0 +1,584 @@
+{
+  "CoderBash.Net.ECB.dll": {
+    "/Users/nicolasdemarbaix/Workspace/CoderBash/libraries/CoderBash.Net.ECB/CoderBash.Net.ECB/Models/ExchangeRate.cs": {
+      "CoderBash.Net.ECB.Models.ExchangeRate": {
+        "System.String CoderBash.Net.ECB.Models.ExchangeRate::get_FromCurrency()": {
+          "Lines": {
+            "12": 326526
+          },
+          "Branches": []
+        },
+        "System.String CoderBash.Net.ECB.Models.ExchangeRate::get_ToCurrency()": {
+          "Lines": {
+            "17": 326526
+          },
+          "Branches": []
+        },
+        "System.DateTime CoderBash.Net.ECB.Models.ExchangeRate::get_Date()": {
+          "Lines": {
+            "22": 163263
+          },
+          "Branches": []
+        },
+        "System.Double CoderBash.Net.ECB.Models.ExchangeRate::get_Rate()": {
+          "Lines": {
+            "27": 163263
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/nicolasdemarbaix/Workspace/CoderBash/libraries/CoderBash.Net.ECB/CoderBash.Net.ECB/Constants/ECBCurrencies.cs": {
+      "CoderBash.Net.ECB.Constants.ECBCurrency": {
+        "System.String CoderBash.Net.ECB.Constants.ECBCurrency::get_IsoCode()": {
+          "Lines": {
+            "12": 3765415
+          },
+          "Branches": []
+        },
+        "System.String CoderBash.Net.ECB.Constants.ECBCurrency::get_Description()": {
+          "Lines": {
+            "17": 186
+          },
+          "Branches": []
+        },
+        "System.String CoderBash.Net.ECB.Constants.ECBCurrency::get_Symbol()": {
+          "Lines": {
+            "22": 186
+          },
+          "Branches": []
+        },
+        "System.Void CoderBash.Net.ECB.Constants.ECBCurrency::.ctor(System.String,System.String,System.String)": {
+          "Lines": {
+            "24": 93,
+            "25": 93,
+            "26": 93,
+            "27": 93,
+            "28": 93,
+            "29": 93
+          },
+          "Branches": []
+        }
+      },
+      "CoderBash.Net.ECB.Constants.ECBCurrencies": {
+        "System.Void CoderBash.Net.ECB.Constants.ECBCurrencies::.ctor()": {
+          "Lines": {
+            "37": 3,
+            "38": 3,
+            "39": 3,
+            "40": 3,
+            "41": 3,
+            "42": 3,
+            "43": 3,
+            "44": 3,
+            "45": 3,
+            "46": 3,
+            "47": 3,
+            "48": 3,
+            "49": 3,
+            "50": 3,
+            "51": 3,
+            "52": 3,
+            "53": 3,
+            "54": 3,
+            "55": 3,
+            "56": 3,
+            "57": 3,
+            "58": 3,
+            "59": 3,
+            "60": 3,
+            "61": 3,
+            "62": 3,
+            "63": 3,
+            "64": 3,
+            "65": 3,
+            "66": 3,
+            "67": 3,
+            "68": 3,
+            "69": 3,
+            "70": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/nicolasdemarbaix/Workspace/CoderBash/libraries/CoderBash.Net.ECB/CoderBash.Net.ECB/Client/ECBClient.cs": {
+      "CoderBash.Net.ECB.Client.ECBClient": {
+        "System.Collections.Generic.List`1<CoderBash.Net.ECB.Models.ExchangeRate> CoderBash.Net.ECB.Client.ECBClient::HandleCubeNode(System.Xml.XmlNode)": {
+          "Lines": {
+            "62": 6248,
+            "63": 6248,
+            "65": 6248,
+            "66": 0,
+            "67": 0,
+            "70": 409946,
+            "71": 195601,
+            "72": 195601,
+            "73": 195601,
+            "74": 163263,
+            "75": 195601,
+            "77": 6248,
+            "78": 6248
+          },
+          "Branches": [
+            {
+              "Line": 65,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 20,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6248
+            },
+            {
+              "Line": 70,
+              "Offset": 97,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 195601
+            },
+            {
+              "Line": 73,
+              "Offset": 78,
+              "EndOffset": 80,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 163263
+            },
+            {
+              "Line": 73,
+              "Offset": 78,
+              "EndOffset": 89,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 195601
+            },
+            {
+              "Line": 70,
+              "Offset": 97,
+              "EndOffset": 99,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 6248
+            }
+          ]
+        },
+        "CoderBash.Net.ECB.Models.ExchangeRate CoderBash.Net.ECB.Client.ECBClient::HandleRateNode(System.Xml.XmlNode,System.DateTime)": {
+          "Lines": {
+            "81": 195601,
+            "82": 195601,
+            "83": 195601,
+            "84": 195601,
+            "85": 0,
+            "86": 0,
+            "89": 195601,
+            "90": 195601,
+            "92": 195601,
+            "93": 0,
+            "94": 0,
+            "97": 3797567,
+            "98": 195601,
+            "99": 32338,
+            "100": 32338,
+            "103": 163263,
+            "104": 163263,
+            "105": 163263,
+            "106": 163263,
+            "107": 163263,
+            "108": 163263,
+            "109": 163263,
+            "110": 195601
+          },
+          "Branches": [
+            {
+              "Line": 82,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 195601
+            },
+            {
+              "Line": 82,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 195601
+            },
+            {
+              "Line": 82,
+              "Offset": 13,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 31,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 59,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 195601
+            },
+            {
+              "Line": 92,
+              "Offset": 141,
+              "EndOffset": 143,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 92,
+              "Offset": 141,
+              "EndOffset": 149,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 195601
+            },
+            {
+              "Line": 98,
+              "Offset": 181,
+              "EndOffset": 183,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 32338
+            },
+            {
+              "Line": 98,
+              "Offset": 181,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 163263
+            }
+          ]
+        },
+        "System.Xml.XmlNode CoderBash.Net.ECB.Client.ECBClient::GetRootCubeNode(System.String)": {
+          "Lines": {
+            "115": 3,
+            "116": 3,
+            "117": 3,
+            "119": 3,
+            "120": 0,
+            "121": 0,
+            "124": 3,
+            "126": 24,
+            "127": 9,
+            "128": 12,
+            "129": 3,
+            "130": 3,
+            "132": 6,
+            "134": 3,
+            "135": 3
+          },
+          "Branches": [
+            {
+              "Line": 119,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 31,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 126,
+              "Offset": 118,
+              "EndOffset": 67,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 9
+            },
+            {
+              "Line": 128,
+              "Offset": 103,
+              "EndOffset": 105,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 128,
+              "Offset": 103,
+              "EndOffset": 111,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 126,
+              "Offset": 118,
+              "EndOffset": 120,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Boolean CoderBash.Net.ECB.Client.ECBClient::TryGetDate(System.Xml.XmlNode,System.DateTime&)": {
+          "Lines": {
+            "138": 6248,
+            "139": 6248,
+            "141": 6248,
+            "142": 0,
+            "143": 0,
+            "146": 6248,
+            "148": 6248,
+            "149": 6248
+          },
+          "Branches": [
+            {
+              "Line": 141,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 6248
+            },
+            {
+              "Line": 141,
+              "Offset": 18,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 141,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 141,
+              "Offset": 44,
+              "EndOffset": 51,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6248
+            }
+          ]
+        },
+        "System.Void CoderBash.Net.ECB.Client.ECBClient::Dispose()": {
+          "Lines": {
+            "175": 3,
+            "176": 3,
+            "178": 3,
+            "179": 3
+          },
+          "Branches": [
+            {
+              "Line": 178,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 178,
+              "Offset": 15,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Net.Http.HttpClient CoderBash.Net.ECB.Client.ECBClient::SetupClient()": {
+          "Lines": {
+            "184": 3,
+            "185": 3,
+            "186": 3,
+            "187": 3,
+            "188": 3,
+            "190": 3,
+            "191": 3
+          },
+          "Branches": []
+        },
+        "System.Void CoderBash.Net.ECB.Client.ECBClient::.ctor()": {
+          "Lines": {
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        }
+      },
+      "CoderBash.Net.ECB.Client.ECBClient/<FetchRatesAsync>d__6": {
+        "System.Void CoderBash.Net.ECB.Client.ECBClient/<FetchRatesAsync>d__6::MoveNext()": {
+          "Lines": {
+            "40": 3,
+            "41": 3,
+            "43": 3,
+            "45": 3,
+            "47": 3,
+            "48": 0,
+            "49": 0,
+            "52": 12505,
+            "53": 6248,
+            "54": 6248,
+            "55": 6248,
+            "56": 6248,
+            "58": 3,
+            "59": 3
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 193,
+              "EndOffset": 195,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 193,
+              "EndOffset": 223,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 52,
+              "Offset": 338,
+              "EndOffset": 248,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6248
+            },
+            {
+              "Line": 52,
+              "Offset": 338,
+              "EndOffset": 340,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "CoderBash.Net.ECB.Client.ECBClient/<GetDailyRatesAsync>d__3": {
+        "System.Void CoderBash.Net.ECB.Client.ECBClient/<GetDailyRatesAsync>d__3::MoveNext()": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": []
+        }
+      },
+      "CoderBash.Net.ECB.Client.ECBClient/<GetDataAsync>d__11": {
+        "System.Void CoderBash.Net.ECB.Client.ECBClient/<GetDataAsync>d__11::MoveNext()": {
+          "Lines": {
+            "154": 3,
+            "155": 3,
+            "157": 3,
+            "158": 0,
+            "159": 0,
+            "162": 3,
+            "164": 3,
+            "165": 0,
+            "166": 0,
+            "169": 3,
+            "170": 3
+          },
+          "Branches": [
+            {
+              "Line": 157,
+              "Offset": 186,
+              "EndOffset": 188,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 157,
+              "Offset": 186,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 164,
+              "Offset": 379,
+              "EndOffset": 381,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 164,
+              "Offset": 379,
+              "EndOffset": 409,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "CoderBash.Net.ECB.Client.ECBClient/<GetFullHistoryAsync>d__5": {
+        "System.Void CoderBash.Net.ECB.Client.ECBClient/<GetFullHistoryAsync>d__5::MoveNext()": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "36": 1
+          },
+          "Branches": []
+        }
+      },
+      "CoderBash.Net.ECB.Client.ECBClient/<GetRecentHistoryAsync>d__4": {
+        "System.Void CoderBash.Net.ECB.Client.ECBClient/<GetRecentHistoryAsync>d__4::MoveNext()": {
+          "Lines": {
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
